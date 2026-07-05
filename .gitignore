@@ -1,0 +1,35 @@
+# Environment and secrets
+.env
+.env.*
+*.env
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local app runtime artifacts
+chroma_db/
+temp/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
