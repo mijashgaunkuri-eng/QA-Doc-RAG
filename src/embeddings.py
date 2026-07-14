@@ -17,7 +17,7 @@ def get_embeddings_model(provider: str = "huggingface"):
     return HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
 
-DEFAULT_COLLECTION_NAME = "nepaldocs"
+DEFAULT_COLLECTION_NAME = "documents"
 
 
 def _get_chroma_collection(vector_store):

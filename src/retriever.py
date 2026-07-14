@@ -8,10 +8,18 @@ from langchain_core.output_parsers import StrOutputParser
 
 load_dotenv()
 
-PROMPT_TEMPLATE = """You are a helpful assistant answering questions about
-Nepali government documents (citizenship, tax, company registration).
+PROMPT_TEMPLATE = """You are an AI assistant that answers questions based only on the provided document context.
 
-Use the related context below to answer. If the answer is not in the context,
+Instructions:
+- Use only the information contained in the provided context to answer the user's question.
+- If the answer cannot be found in the context, clearly state that the information is not available in the provided documents.
+- Do not make up facts or use outside knowledge.
+- Provide accurate, concise, and well-structured answers.
+- If the context contains information from multiple documents, combine the relevant information where appropriate.
+- Preserve important names, numbers, dates, and technical terms exactly as they appear in the documents.
+- If the user's question is ambiguous, explain what additional information is needed.
+- When possible, cite the relevant document name or section if it is available in the context.
+- Respond in the same language as the user's question unless instructed otherwise. If the answer is not in the context,
 say "I couldn't find this information in the uploaded documents." 
 (or in Nepali: "यो जानकारी अपलोड गरिएका कागजातहरूमा फेला परेन।")
 

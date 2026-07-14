@@ -1,5 +1,5 @@
 """
-Nepal Docs QA AI - Automatic Processing Version
+Docs QA AI - Automatic Processing Version
 
 This application enables automatic document processing workflow:
 - Upload documents → System automatically chunks, embeds, and makes chat available
@@ -26,13 +26,10 @@ from src.citations import format_citations
 
 # --- Page config ---
 st.set_page_config(
-    page_title="Nepal Docs QA AI",
+    page_title="Docs QA AI",
     page_icon=":books:",
     layout="wide",
     initial_sidebar_state="expanded",
-    menu_items={
-        "Report a bug": "mailto:feedback@nepaldocsqa.ai",
-    },
 )
 
 # --- Session-state defaults ---
@@ -330,7 +327,7 @@ def process_new_uploads_automatically():
 # ============================================================================
 
 with st.sidebar:
-    st.title("Nepal Docs QA AI")
+    st.title("Docs QA AI")
     st.write("Document manager, language settings and status live here.")
     st.divider()
 
@@ -408,7 +405,7 @@ with st.sidebar:
 # MAIN CONTENT - UPLOAD SECTION
 # ============================================================================
 
-st.title("Nepal Docs QA AI")
+st.title("Docs QA AI")
 st.markdown("### Upload, process, embed and chat with your documents")
 
 # Determine current pipeline step

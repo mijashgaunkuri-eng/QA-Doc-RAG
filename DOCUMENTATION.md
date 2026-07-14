@@ -1,6 +1,6 @@
-# Nepal Docs Q&A App — Technical Documentation
+# Docs Q&A App — Technical Documentation
 
-A **Retrieval-Augmented Generation (RAG)** web application for asking questions about uploaded Nepali government documents (citizenship, tax, company registration, etc.). Built with **Streamlit**, **LangChain**, **ChromaDB**, **HuggingFace embeddings**, and **Groq LLM**.
+A **Retrieval-Augmented Generation (RAG)** web application for asking questions about uploaded documents . Built with **Streamlit**, **LangChain**, **ChromaDB**, **HuggingFace embeddings**, and **Groq LLM**.
 
 ---
 
@@ -54,7 +54,7 @@ flowchart TB
 ### Project layout
 
 ```
-NepalDocs Q&A App/
+Docs Q&A App/
 ├── app.py                 # Streamlit UI, orchestration, session state
 ├── chroma_db/             # Persistent vector database (created at runtime)
 ├── temp/                  # Temporary PDF files during loading
@@ -77,7 +77,7 @@ This app uses **three distinct memory layers**. They serve different purposes an
 | Property | Value |
 |----------|-------|
 | **Location** | `chroma_db/` directory on disk |
-| **Collection name** | `nepaldocs` |
+| **Collection name** | `documents` |
 | **What is stored** | Text chunk content + embedding vectors + metadata |
 | **Embedding model** | `sentence-transformers/all-MiniLM-L6-v2` (384-dim, local) |
 | **Survives** | App restarts, browser refresh |
@@ -213,7 +213,7 @@ sequenceDiagram
 
 The LLM receives:
 
-1. **System-style instructions** — Nepali government doc assistant; answer only from context; fallback message in EN/NE
+1. **System-style instructions** — Document assistant; answer only from context; fallback message in EN/NE
 2. **Language instruction** — auto-detect, force English, or force Nepali
 3. **Context** — up to 10 retrieved chunks, separated by `\n\n---\n\n`
 4. **Question** — raw user input
@@ -537,4 +537,4 @@ flowchart TB
 
 ---
 
-*Generated from codebase analysis of Nepal Docs Q&A App.*
+*Generated from codebase analysis of Docs Q&A App.*
